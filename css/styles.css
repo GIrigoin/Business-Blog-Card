@@ -1,130 +1,118 @@
-@import url('https://fonts.googleapis.com/css2?family=Sora:wght@200;400;500&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 
 /* Reset some default styles */
-body, h1, h2, h3, p, ul, li {
-    margin: 0;
-    padding: 0;
+body,
+h1,
+h2,
+h3,
+p,
+ul,
+li {
+  margin: 0;
+  padding: 0;
 }
 
 a {
-    text-decoration: none;
-    color: inherit;
+  text-decoration: none;
+  color: inherit;
 }
 
 * {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 /* Add some styles for body*/
 body {
-    min-height: 100vh;
-    max-width: 1280px;
-    margin: 0 auto;
-    background: #020617;
-    color: #cbd5e1;
-    font-family: 'Sora', sans-serif;
-    line-height: 1.5;
-    background-image: radial-gradient(#0f172a 1px,transparent 0),radial-gradient(#0f172a 1px,transparent 0);
-    background-position: 0 0,25px 25px;
-    background-attachment: fixed;
-    background-size: 50px 50px;
-    overflow-x: hidden;
-    padding: 4rem;
-    display: flex;
-    justify-content: space-between;
-    flex-direction: column;
-}
-
-header {
-    display: flex;
-    justify-content: space-between;
-
-}
-
-.get-started {
-    padding: 1rem 2rem;
-    border: 0.5px solid #1e293b;
-    background-color: #94a3b817;
-    border-radius: 2rem;
-    font-size: 0.875rem;
-    font-weight: 200;
-    width: 100%;
-    text-align: center;
+  min-height: 100vh;
+  max-width: 1280px;
+  margin: 0 auto;
+  font-family: "Lato", sans-serif;
+  line-height: 1.5;
+  background-color: #f2f5f9;
+  background-position: 0 0, 25px 25px;
+  background-attachment: fixed;
+  background-size: 50px 50px;
+  overflow-x: hidden;
+  padding: 4rem;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
 }
 
 main {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    row-gap: 0.5rem;
-    column-gap: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  row-gap: 0.5rem;
+  column-gap: 1.5rem;
+}
+
+.blog-card {
+  width: 418px;
+  height: 530px;
+  background-color: white;
+  border-radius: 15px;
+}
+
+.hero-img-container {
+  width: 418px;
+  position: relative;
+}
+.hero-img {
+  width: 418px;
+  border-radius: 15px;
+}
+.hero-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+.text-container {
+  margin: 0 34px;
 }
 
 .title {
-    position: relative;
-    text-align: center;
+  color: #111729;
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-size: 24px;
+  /* margin-bottom: 24px; */
+}
+.text {
+  color: #677489;
+  font-size: 16px;
 }
 
-.title::after {
-    content: "";
-    background: url('../images/blur-bg.svg');
-    background-size: contain;
-    background-repeat: no-repeat;
-    position: absolute;
-    bottom: -130px;
-    right: -75px;
-    width: 500px;
-    height: 250px;
-    opacity: 0.5;
+.author-container {
+  display: flex;
+  flex-direction: row;
+  padding: 28px 34px;
+  border-top: #f2f5f9 solid 1px;
+  margin-top: 28px;
 }
-
-.logo {
-    display: none;
+.avatar {
+  margin: 0;
+  padding: 0;
+  width: 32px;
+  height: 32px;
+  border-radius: 100%;
 }
-
-
-.link-card {
-    padding: 1rem;
-    border: 0.5px solid transparent;
-    transition: all ease-in-out 50ms;
-    cursor: pointer;
+.author {
+  margin-left: 16px;
 }
-
-.link-card:hover {
-    border: 0.5px solid #1e293b;
-    background-color: #94a3b817;
-    border-radius: 8px;
+.name {
+  margin: 0;
+  font-size: 16px;
+  font-weight: bold;
 }
-
-.link-title {
-    font-size: 1.125rem;
+.about {
+  font-size: 12px;
+  color: #677489;
 }
-
-.link-description {
-    font-size: 0.875rem;
-    font-weight: 200;
-    margin-top: 0.5rem;
-    color: #94a3b8;
-}
-
 @media screen and (min-width: 720px) {
-    .logo {
-        display: initial;
-    }
-
-    .get-started {
-        width: auto;
-    }
-
-    main {
-        flex-direction: row;
-    }
-
-    footer {
-        display: grid;
-        grid-template-columns: repeat(4, 1fr);
-        gap: 1rem;
-    }
-
+  main {
+    flex-direction: row;
   }
+}
